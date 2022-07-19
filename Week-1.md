@@ -18,3 +18,21 @@ function reverseWords(str){
   return reversed = str.split(' ').reverse().join(' ')
 }
 ```
+___
+## Wednesday
+### 1. Smallest Integer In Array
+``Given an array of integers your solution should find the smallest integer.``
+```js
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    var smallest = args[0]
+    args.map((x)=>{
+      if(x<smallest){
+        smallest = x
+      }
+    })
+    return smallest
+  }
+}
+```
+___
