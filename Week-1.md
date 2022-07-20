@@ -1,6 +1,6 @@
 <h1 align="center">Week 1 ✨</h1>
 
-## Tuesday
+## Tuesday 📆
 ### 1. Ensure question
 ``Given a string, write a function that returns the string with a question mark ("?") appends to the end,
 unless the original string ends with a question mark, in which case, returns the original string.``
@@ -19,7 +19,7 @@ function reverseWords(str){
 }
 ```
 ___
-## Wednesday
+## Wednesday 📆
 ### 1. Smallest Integer In Array
 ``Given an array of integers your solution should find the smallest integer.``
 ```js
@@ -36,3 +36,12 @@ class SmallestIntegerFinder {
 }
 ```
 ___
+## Thursday 📆
+### 1. Odd Or Even
+``Given a list of integers, determine whether the sum of its elements is odd or even.``
+```js
+function oddOrEven(array) {
+  const sum = array.reduce((a,b)=>a+b,0);
+  return sum % 2 === 0 ? 'even' : 'odd';
+}
+```
