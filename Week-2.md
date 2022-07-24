@@ -27,3 +27,42 @@ function well(x){
 }
 ```
 ___
+## Wednesday 📆
+### 1. Managing Events in React JS
+``Write a react component that will display the current value of our counter.``
+```js
+import React from 'react';
+
+export class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state={
+      counter: 0
+    }
+    this.add = this.add.bind(this);
+    this.rest = this.rest.bind(this);
+  }
+  add(){
+      this.state.counter+=1
+    }
+  rest(){
+      this.state.counter-=1
+    }
+  
+  // Your event handlers 
+  render() {
+    return (
+      <div>
+        <h1 id="counter">{this.state.counter}</h1>
+          <button type="button" onClick={this.rest} id="decrement">
+            Decrement
+          </button>
+          <button type="button" onClick={this.add} id="increment">
+            Increment
+          </button>
+      </div>
+    )
+  }
+}
+```
+___
