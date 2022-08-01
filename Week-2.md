@@ -66,3 +66,19 @@ export class Counter extends React.Component {
 }
 ```
 ___
+## Thursday 📆
+### 1. Easter egg list in ReactJS
+``You decide to create a simple list of your favourite Easter eggs in React.``
+```js
+import React from 'react';
+
+export const EggList = (props) => {return (
+  <ul>
+    {props.eggs.map((egg, i)=>{return<EasterEgg key={i} name={egg}/>})}
+  </ul>
+)};
+
+export const EasterEgg = ({ name }) => {return(
+  <li>{name}</li>
+)};
+```
