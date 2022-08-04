@@ -1,14 +1,22 @@
 import React from 'react'
-import Blogs from './blogs.json'
+import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 const BlogPage = () => {
-    let id = useParams().id
+    let idPage = useParams().id
+    const [blog, setBlog] = useState([]);
+    useEffect(()=>{
+        fetch('json/blogs.json')
+        .then(res => res.json())
+        .then(data => {
+          setBlog(data[idPage])
+        })
+    }, [idPage])
   return (
     <>
-    <h1>{Blogs[id].title}</h1>
-    <p>{Blogs[id].content}</p>
-    <Link to={"/home"}><button>👈 Back</button></Link>
+    <h1>{blog.title}</h1>
+    <p>{blog.content}</p>
+    <Link to={"/"}><button>👈 Back</button></Link>
     </>
   )
 }

@@ -1,15 +1,17 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
-import Blogs from './blogs.json';
 import { Link, Outlet } from 'react-router-dom';
 
 function Home() {
     const [blogs, setBlogs] = useState([]);
     useEffect(()=>{
-        setBlogs(
-            Blogs
-        )
-    }, [blogs])
+        fetch('json/blogs.json')
+        .then(res => res.json())
+        .then(data => {
+          setBlogs(data)
+        })
+    }, [])
+
   return (
     <>
     <h1>Ale's amazing blog</h1>
