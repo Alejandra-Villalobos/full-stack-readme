@@ -1,0 +1,25 @@
+[
+    {
+        "id": 0,
+        "title": "React",
+        "content": "This is a post about React",
+        "creation_date": "2-08-2022",
+        "creator": "Ale"
+    },
+
+    {
+        "id": 1,
+        "title": "Core Code",
+        "content": "This is a post about Core Code",
+        "creation_date": "3-08-2022",
+        "creator": "Ale"
+    },
+
+    {
+        "id": 2,
+        "title": "Hello World",
+        "content": "Hello World 👋",
+        "creation_date": "4-08-2022",
+        "creator": "Ale"
+    }
+]
