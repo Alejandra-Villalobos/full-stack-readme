@@ -10,3 +10,12 @@ function longest(s1, s2) {
   return [...set].join('')
 }
 ```
+___
+## Tuesday 📆
+### 1. Leap Years 
+``In this kata you should simply determine, whether a given year is a leap year or not.``
+```js
+function isLeapYear(year) {
+  return ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) ? true : false
+}
+```
