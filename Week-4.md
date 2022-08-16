@@ -19,3 +19,22 @@ function isLeapYear(year) {
   return ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) ? true : false
 }
 ```
+___
+## Wednesday 📆
+### 1. Maximum Length Difference
+``You are given two arrays a1 and a2 of strings. Each string is composed with letters from a to z. Let x be any string in the first array and y be any string in the second array.``
+
+``Find max(abs(length(x) − length(y)))``
+```js
+function mxdiflg(a1, a2) {
+  if (!a1.length || !a2.length) return -1
+  else{
+    a1.sort((a,b) => a.length - b.length)
+    a2.sort((a,b) => a.length - b.length)
+    return Math.max(
+      Math.abs(a1[0].length - a2[a2.length - 1].length),
+      Math.abs(a2[0].length - a1[a1.length - 1].length)
+    )
+  }
+}
+```
