@@ -38,3 +38,16 @@ function mxdiflg(a1, a2) {
   }
 }
 ```
+___
+## Thursday 📆
+### 1. Base64 Numeric Translator
+``Complete the method that will take a base-64 number (as a string) and output its base-10 value as an integer.``
+```js
+function base64toBase10(base64) {
+    const b64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+    if(base64.length===1) return b64.indexOf(base64)
+    else{
+       return base64.split('').reduce((a,b)=> a * 64 +b64.indexOf(b),0);
+    }
+}
+```
