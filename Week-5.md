@@ -9,3 +9,25 @@ function map(head, f) {
   return !head ? null : new Node(f(head.data), map(head.next, f));
 }
 ```
+___
+
+## Tuesday :calendar:
+### 1. Separating Strings
+``Create a function that takes a string and separates it into a sequence of letters.``
+```js
+function sepStr(str) {
+  var separated = []
+  var splited = str.split(' ')
+  var longestWord = str.split(' ').sort((a,b)=> b.length - a.length)[0]
+  for(let i = 0; i <  longestWord.length; i++){
+    var line = []
+    splited.map((word)=>{
+      line.push(word[i] || '')
+    })
+    separated.push(line)
+  }
+  
+  return separated
+}
+```
+___
