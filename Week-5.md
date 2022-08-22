@@ -31,3 +31,17 @@ function sepStr(str) {
 }
 ```
 ___
+## Wednesday :calendar:
+### 1. Highest Scoring Word 
+``Given a string of words, you need to find the highest scoring word.``
+```js
+function high(x){
+  const words = x.split(' ')
+  const wordValues = words.map((word)=>word
+            .split('')
+            .map((letter)=>letter.charCodeAt(0)-96)
+            .reduce((a,b)=>a+b))
+  return words[wordValues.indexOf(Math.max(...wordValues))]
+}
+```
+___
