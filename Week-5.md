@@ -45,3 +45,14 @@ function high(x){
 }
 ```
 ___
+## Thursday :calendar:
+### 1. Where Is My Parent?
+``Given a string of words, you need to find the highest scoring word.``
+```js
+function findChildren(dancingBrigade) {
+	return dancingBrigade.split('')
+      .sort((a,b) => a.localeCompare(b, 'en', { caseFirst: 'upper' }))
+      .join('')
+}
+```
+___
