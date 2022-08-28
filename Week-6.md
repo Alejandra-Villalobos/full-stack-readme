@@ -34,3 +34,16 @@ function validSolution(board) {
   return sumh.every(equals45) && sumv.every(equals45);
 }
 ```
+___
+# Wednesday :calendar:
+## 1. Even or Odd
+``Return a table with a column is_even containing "Even" or "Odd" depending on number column values.``
+
+```sql
+SELECT CASE
+  WHEN (number % 2 = 0) THEN 'Even'
+  ELSE 'Odd'
+END AS is_even
+FROM numbers
+```
+___
