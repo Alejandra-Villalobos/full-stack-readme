@@ -47,3 +47,11 @@ END AS is_even
 FROM numbers
 ```
 ___
+# Thursday :calendar:
+## 1. Returning Strings
+``Write a select statement that takes name from person table and return "Hello, <name> how are you doing today?" results in a column named greeting``
+
+```sql
+SELECT 'Hello, ' || name || ' how are you doing today?' AS greeting FROM person
+```
+___
