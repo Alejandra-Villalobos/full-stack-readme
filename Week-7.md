@@ -14,3 +14,15 @@ FROM  eusales
 WHERE PRICE > 50
 ```
 ___
+
+## Tuesday :calendar:
+### 2. The takeWhile Function
+```js
+function takeWhile (arr, pred) {
+  for (let i = 0; i < arr.length; i++) {
+    if (!pred(arr[i])) return arr.slice(0, i);
+  }
+  return arr
+}
+```
+___
